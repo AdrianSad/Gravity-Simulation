@@ -1,6 +1,4 @@
 #pragma once
-#ifndef Planet_hpp
-#define Planet_hpp
 #include <SFML/Graphics.hpp>
 #include <vector>
 using namespace sf;
@@ -30,5 +28,3 @@ public:
 	void update(double dt, vector<Planet*> planets);
 
 };
-
-#endif // !Planet_hpp

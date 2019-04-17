@@ -1,6 +1,4 @@
 #pragma once
-#ifndef Force_hpp
-#define Force_hpp
 
 class Force {
 
@@ -16,4 +14,3 @@ public:
 
 };
 
-#endif // !Force

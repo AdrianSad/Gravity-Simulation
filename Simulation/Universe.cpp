@@ -4,15 +4,21 @@
 Universe::Universe(float speed) :
 	worldSpeed(speed) {}
 
-Universe::addPlanet(Vector2<double> position, Vector2<double> velocity) {
+void Universe::addPlanet(Vector2f position, Vector2<double> velocity) {
 
-	auto tab[] = { Color::Red, Color::Blue, Color::Cyan, Color::Green, Color::White, Color::Purple };
+	Color tab[] = { Color::Red, Color::Blue, Color::Cyan, Color::Green, Color::White, Color::Magenta };
 	auto color = tab[rand() % 6];
 	auto * temp = new Planet(1, 5);
 	temp->setFillColor(color);
-	temp->setPosition((float)position);
+	temp->setPosition(position);
 	temp->addVel(velocity);
 	planets.push_back(temp);
+
+}
+
+void Universe::addPlanet(Planet * obj) {
+
+	planets.push_back(obj);
 
 }
 
@@ -49,5 +55,10 @@ void Universe::refresh(double dt) {
 
 		object->update(dt * worldSpeed, planets);
 	}
+}
+
+vector<Planet*> Universe::getPlanets() const {
+
+	return planets;
 }
 

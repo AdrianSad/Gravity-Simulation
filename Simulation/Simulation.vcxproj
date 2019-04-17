@@ -157,6 +157,7 @@
     <ClInclude Include="Force.hpp" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Planet.hpp" />
+    <ClInclude Include="Universe.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Force.cpp" />
@@ -168,6 +169,7 @@
     </ClCompile>
     <ClCompile Include="Planet.cpp" />
     <ClCompile Include="Simulation.cpp" />
+    <ClCompile Include="Universe.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
