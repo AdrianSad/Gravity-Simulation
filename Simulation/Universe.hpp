@@ -13,7 +13,7 @@ public:
 
 	void addPlanet(Vector2f position, Vector2<double> velocity);
 	void addPlanet(Planet * obj);
-	void getPlanet(Vector2<double> mousePosition) const;
+	Planet* getPlanet(Vector2<double> mousePosition) const;
 	float getSpeed() const;
 	void increaseSpeed();
 	void decreaseSpeed();

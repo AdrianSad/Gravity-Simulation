@@ -1,5 +1,6 @@
 #include "Universe.hpp"
 #include <cstdlib>
+#include <cmath>
 
 Universe::Universe(float speed) :
 	worldSpeed(speed) {}
@@ -22,14 +23,17 @@ void Universe::addPlanet(Planet * obj) {
 
 }
 
-void Universe::getPlanet(Vector2<double> mousePosition) const {
+Planet* Universe::getPlanet(Vector2<double> mousePosition) const {
 
 
-	/*for (auto & planet : planets) {
+	for (auto & planet : planets) {
 
+		if (sqrt((planet->getPosition().x - mousePosition.x)*(planet->getPosition().x - mousePosition.x) + (planet->getPosition().y - mousePosition.y)*(planet->getPosition().y - mousePosition.y)) < planet->getRadius()) {
 
-
-	}*/
+			return planet;
+		}
+	}
+	return NULL;
 
 }
 
